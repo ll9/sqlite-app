@@ -217,6 +217,7 @@ module.exports = env => {
             }]),
             // Copy assets to out dir. Add your own globs as needed.
             new CopyWebpackPlugin([
+                { from: "**/*.db"},
                 { from: "fonts/**" },
                 { from: "**/*.+(jpg|png)" },
                 { from: "assets/**/*" },

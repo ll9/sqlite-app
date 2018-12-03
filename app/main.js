@@ -1,6 +1,9 @@
 import Vue from 'nativescript-vue'
 import App from './components/App'
 import VueDevtools from 'nativescript-vue-devtools'
+import SqliteFactory from "./Utils/SqliteFactory";
+
+SqliteFactory.createNewDbContext().copyDatabase();
 
 if(TNS_ENV !== 'production') {
   Vue.use(VueDevtools)
